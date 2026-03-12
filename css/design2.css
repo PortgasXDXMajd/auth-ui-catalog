@@ -1,0 +1,343 @@
+/* ============ DESIGN 2: MIDNIGHT CORPORATE ============ */
+.design2-section {
+    background: #f8fafc;
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+}
+
+.d2-back { background: rgba(255,255,255,0.9); color: #334155; border-color: #e2e8f0; }
+.d2-back:hover { background: #6366f1; color: #fff; border-color: #6366f1; }
+
+.d2-page-nav {
+    background: rgba(255,255,255,0.9);
+    border-color: #e2e8f0;
+}
+.d2-page-nav button { color: #64748b; }
+.d2-page-nav button.active { background: #6366f1; color: #fff; }
+.d2-page-nav button:hover { color: #334155; }
+
+/* Wrapper */
+.d2-wrapper {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Left panel */
+.d2-left {
+    width: 45%;
+    background: linear-gradient(160deg, #1e1b4b, #312e81, #4338ca);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 3rem;
+    position: relative;
+    overflow: hidden;
+}
+.d2-left::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.d2-brand-content {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    max-width: 400px;
+}
+.d2-brand-logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.d2-brand-logo i { font-size: 1.25rem; color: #a5b4fc; }
+
+.d2-brand-content h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 1.25rem;
+}
+.d2-brand-content h1 span { color: #a5b4fc; }
+.d2-brand-content > p {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+}
+
+.d2-stats {
+    display: flex;
+    gap: 2.5rem;
+}
+.d2-stats div {
+    display: flex;
+    flex-direction: column;
+}
+.d2-stats strong {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+.d2-stats span { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 0.2rem; }
+
+/* Testimonial */
+.d2-testimonial {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+.d2-testimonial > p {
+    font-size: 0.95rem;
+    font-style: italic;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+.d2-avatar-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+.d2-avatar {
+    width: 40px; height: 40px;
+    background: linear-gradient(135deg, #818cf8, #6366f1);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+.d2-avatar-row strong { font-size: 0.85rem; }
+.d2-avatar-row span { font-size: 0.75rem; color: rgba(255,255,255,0.5); }
+
+/* Right panel */
+.d2-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: #fff;
+}
+
+.d2-form-wrap {
+    width: 100%;
+    max-width: 400px;
+    animation: d2FadeIn 0.4s ease-out;
+}
+
+@keyframes d2FadeIn {
+    from { opacity: 0; transform: translateX(10px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.d2-form-wrap h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.35rem;
+}
+.d2-sub {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 1.75rem;
+}
+
+.d2-form-wrap label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 0.4rem;
+    margin-top: 1rem;
+}
+.d2-form-wrap label:first-of-type { margin-top: 0; }
+
+.d2-input {
+    width: 100%;
+    padding: 0.75rem 0.9rem;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    color: #0f172a;
+    transition: all 0.2s;
+}
+.d2-input::placeholder { color: #94a3b8; }
+.d2-input:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99,102,241,0.1);
+}
+
+.d2-pass-wrap {
+    position: relative;
+}
+.d2-eye {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    color: #94a3b8;
+    font-size: 0.85rem;
+}
+.d2-eye:hover { color: #6366f1; }
+
+.d2-name-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+/* Row */
+.d2-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.25rem 0;
+}
+.d2-check {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: #334155;
+    cursor: pointer;
+}
+.d2-check input[type="checkbox"] {
+    width: 16px; height: 16px;
+    accent-color: #6366f1;
+    cursor: pointer;
+}
+.d2-check a { color: #6366f1; }
+.d2-row a { color: #6366f1; font-size: 0.8rem; font-weight: 600; }
+.d2-row a:hover { text-decoration: underline; }
+
+/* Button */
+.d2-btn-primary {
+    width: 100%;
+    padding: 0.85rem;
+    background: #6366f1;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.2s;
+    margin-top: 0.5rem;
+}
+.d2-btn-primary:hover { background: #4f46e5; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(99,102,241,0.3); }
+
+/* Divider */
+.d2-divider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    color: #94a3b8;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+.d2-divider::before, .d2-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #e2e8f0;
+}
+
+/* Social */
+.d2-btn-social {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-bottom: 0.6rem;
+    transition: all 0.2s;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    color: #334155;
+}
+.d2-btn-social:hover { background: #f8fafc; border-color: #cbd5e1; }
+.d2-btn-social.sso { background: #f1f5f9; border-color: #e2e8f0; }
+.d2-btn-social.sso:hover { background: #e2e8f0; }
+
+.d2-footer {
+    text-align: center;
+    margin-top: 1.75rem;
+    font-size: 0.85rem;
+    color: #64748b;
+}
+.d2-footer a { color: #6366f1; font-weight: 600; }
+.d2-footer a:hover { text-decoration: underline; }
+
+/* Forgot password extras */
+.d2-icon-circle {
+    width: 56px; height: 56px;
+    background: #f0f0ff;
+    border: 1px solid #e0e0ff;
+    border-radius: 16px;
+    display: grid;
+    place-items: center;
+    font-size: 1.25rem;
+    color: #6366f1;
+    margin-bottom: 1.25rem;
+}
+
+.d2-otp-inputs {
+    display: flex;
+    gap: 0.6rem;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+.d2-otp-inputs .otp-box {
+    background: #fff;
+    border-color: #e2e8f0;
+    color: #0f172a;
+}
+.d2-otp-inputs .otp-box:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99,102,241,0.1);
+}
+
+.d2-resend {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: #64748b;
+}
+.d2-resend a { color: #6366f1; font-weight: 600; }
+
+/* Password requirements */
+.d2-requirements {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    margin: 0.75rem 0;
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+.d2-requirements .met { color: #22c55e; }
+.d2-requirements i { margin-right: 0.2rem; }
+
+@media (max-width: 900px) {
+    .d2-wrapper { flex-direction: column; }
+    .d2-left { width: 100%; min-height: 320px; padding: 3rem 2rem; }
+    .d2-right { padding: 2rem 1.5rem; }
+    .d2-brand-content h1 { font-size: 2rem; }
+    .d2-name-row { grid-template-columns: 1fr; }
+}
